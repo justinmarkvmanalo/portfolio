@@ -582,6 +582,83 @@ p {
   background: #091126;
 }
 
+.project-preview-fallback {
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(129, 98, 255, 0.28), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(52, 216, 198, 0.22), transparent 32%),
+    linear-gradient(180deg, #0d1630 0%, #091126 100%);
+}
+
+.fallback-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid rgba(144, 177, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fallback-grid {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+  height: calc(100% - 44px);
+}
+
+.fallback-sidebar,
+.fallback-content,
+.fallback-panels span {
+  border: 1px solid rgba(144, 177, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.fallback-sidebar {
+  border-radius: 16px;
+}
+
+.fallback-content {
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.fallback-line {
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(77, 162, 255, 0.68), rgba(52, 216, 198, 0.48));
+  opacity: 0.82;
+  margin-bottom: 12px;
+}
+
+.fallback-line-strong {
+  width: 78%;
+  height: 14px;
+}
+
+.fallback-line-short {
+  width: 46%;
+}
+
+.fallback-panels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.fallback-panels span {
+  min-height: 84px;
+  border-radius: 14px;
+}
+
 .project-link {
   display: inline-flex;
   margin-top: 22px;
@@ -724,6 +801,15 @@ p {
   .focus-icon {
     width: 68px;
     height: 68px;
+  }
+
+  .fallback-grid,
+  .fallback-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .fallback-sidebar {
+    display: none;
   }
 
   h1 {
