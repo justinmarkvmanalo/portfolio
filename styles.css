@@ -523,6 +523,10 @@ p {
   min-height: 290px;
 }
 
+.live-project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .project-glow {
   position: absolute;
   inset: -20% auto auto 60%;
@@ -534,6 +538,7 @@ p {
 }
 
 .project-type {
+  margin-top: 22px;
   margin-bottom: 14px;
   font-size: 0.78rem;
   font-weight: 800;
@@ -542,7 +547,42 @@ p {
   color: var(--teal);
 }
 
-.project-tag {
+.project-preview-shell {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid rgba(144, 177, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(3, 8, 20, 0.95);
+}
+
+.project-preview-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 36px;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(144, 177, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.project-preview-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  opacity: 0.9;
+}
+
+.project-preview {
+  display: block;
+  width: 100%;
+  height: 240px;
+  border: 0;
+  background: #091126;
+}
+
+.project-link {
   display: inline-flex;
   margin-top: 22px;
   padding: 10px 14px;
@@ -630,6 +670,7 @@ p {
   .hero-layout,
   .specialty-grid,
   .project-grid,
+  .live-project-grid,
   .workflow-grid,
   .contact-links,
   .about-grid {
@@ -669,6 +710,7 @@ p {
   .hero-metrics,
   .specialty-grid,
   .project-grid,
+  .live-project-grid,
   .workflow-grid,
   .contact-links,
   .about-grid {
